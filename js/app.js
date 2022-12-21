@@ -74,7 +74,7 @@
     
                     if (!value) { 
                         // Bsp. '', null, undefined
-                        setMessage3('Bitte das Alter eingeben.');
+                        setMessage3('Please enter your age.');
                         return false;
                     }
     
@@ -84,12 +84,12 @@
                     // grösser als 65 soll meldung kommen "entschuldige du bist aus dem alter raus wo du noch was lernen kannst. scherz".
                     else if (value < 18) { // NOT (0 <= n <= 10)
                         // kleiner als 18
-                        setMessage3('entschuldige du bist noch zu jung um dich alleine einschreiben zu können.');
+                        setMessage3('I'm sorry, but you are too young to enroll by yourself.');
                         return false;
                     }
                     else if (value > 65) { // NOT (0 <= n <= 10)
                         // Entweder ist die Zahl kleiner Null oder grösser 65.
-                        setMessage3('entschuldige du bist aus dem alter raus wo du noch was lernen kannst.');
+                        setMessage3('I'm sorry, but you are no longer at an age where you can learn anything.');
                         return false;
                     
                     }
@@ -108,7 +108,7 @@
     
                     if (!value) { 
                         // Bsp. '', null, undefined
-                        setMessage4('Bitte die Strasse eingeben.');
+                        setMessage4('Please enter the street.');
                         return false;
                     }
                     else {
@@ -120,15 +120,15 @@
     
                 // Gender Feld Function
                 function validateGender(){
-                    let value = document.getElementById("anrede").value;
+                    let value = document.getElementById("gender").value;
 
                     if (!value) { 
                         // Bsp. '', null, undefined
-                        setMessage4('Bitte die Anrede auswählen.');
+                        setMessage4('Please select your gender.');
                         return false;
                     }
                     else {
-                        setLocalStorage("anrede", value);
+                        setLocalStorage("gender", value);
                         setMessage3(value); 
                         return true;
                 
@@ -160,7 +160,8 @@
                 function setMessage4(value) {
                     document.getElementById("message-5").innerText = value;
                 }
-                
+            
+            /*
             // Video Bg
 
             // Get the video
@@ -179,3 +180,4 @@
                 btn.innerHTML = "Play";
             }
             }
+            */

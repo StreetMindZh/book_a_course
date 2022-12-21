@@ -27,7 +27,11 @@ function writeConfirmation(){
     // Die Personalien werden in Variablen ausgelesen.
 
     let firstname = getLocalStorage("fname");
-    let lastname;
+    let lastname = getLocalStorage(lname);
+    let age = getLocalStorage(age);
+    let street = getLocalStorage(street);
+    let street = getLocalStorage(anrede);
+
    // alert(`firstname = ${firstname}`);
 
 
@@ -36,8 +40,9 @@ function writeConfirmation(){
         //  <p> und <span> Elemente verwendet.
     
     let confirmation = `
-    <p><span class="confirmation-label">Vorname:</span> ${firstname}</p>
-    <p><span class="confirmation-label">Nachname:</span> ${lastname}</p>
+    <p><span class="confirmation-label">FirstName:</span> ${firstname}</p>
+    <p><span class="confirmation-label">LastName:</span> ${lastname}</p>
+    <p><span class="confirmation-label">Age:</span> ${age}</p>
     `;
 
         // Die Bestätigung wird als innerHTML gesetzt.
