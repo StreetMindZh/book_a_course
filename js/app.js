@@ -1,16 +1,16 @@
  /* 
-                Vorbereitungen: 
-                    !) Neue Datei my-first-form-validation.html (ohne Bootstrap)
-                    a) <form> mit zwei input Feldern vom Typ 'text'.
-                    b) Ein input Feld vom Typ 'number'
-                    c) <button> mit der Beschriftung "Validieren" ausserhalb <form>
-                    d) <p> für eine Fehlermeldung unterhalb dem Button
+                Preparations: 
+                    !) "New file my-first-form-validation.html (without Bootstrap)
+                    a) <form> with two input fields of type 'text'.
+                    b) An input field of type 'number'
+                    c) <button> with the label "Validate" outside <form>
+                    d) <p> for an error message below the button
 
-                Validierungen mit JavaScript (inkl. Fehlermeldung): 
-                    1) das erste input Feld darf nicht leer sein
-                    2) beide input Felder dürfen nicht leer sein
-                    3) das zweite input Feld muss ein '@' enthalten
-                    4) der Wert n im Nummernfeld erfüllt 0 <= n <= 10
+                Validations with JavaScript (including error message): 
+                    1) the first input field must not be empty
+                    2) both input fields must not be empty
+                    3) the second input field must contain an '@'
+                    4) the value n in the number field satisfies 0 <= n <= 10
 
                 https://www.w3schools.com/html/html_form_input_types.asp
 
@@ -35,14 +35,14 @@
     
                     if (!value) { 
                         // Bsp. '', null, undefined
-                        setMessage1('Bitte den Vornamen eingeben.');
+                        setMessage1('Please enter the first name.');
                         return false;
                     }
-                    // Ab hier enthält value einen nicht leeren String.
+                    // From here on, value contains a non-empty string.
                     // indexOf() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf?retiredLocale=de
                     else if (value.indexOf('@') === -1) { 
-                        // value enthält KEIN '@' Symbol.
-                        setMessage1('Bitte im Vornamen ein "@" einfügen.');
+                        // value does NOT contain the '@' symbol.
+                        setMessage1('Please insert an '@' in the first name.');
                         return false;
                     }
                     else {
@@ -57,8 +57,8 @@
                     let value = inputElement.value;
     
                     if (!value) { 
-                        // Bsp. '', null, undefined
-                        setMessage2('Bitte den Nachnamen eingeben.');
+                        // Example '', null, undefined
+                        setMessage2('Please enter the last name.');
                         return false;
                     }
                     else {
@@ -78,18 +78,18 @@
                         return false;
                     }
     
-                    // Value verändert von kleiner als 10 auf kleiner als 18 und von grösser als zu grösser als 65 Jahre
-                    // Idee ist 2 verschiedenen ausgaben je nach wahl
-                    // kleiner als 18 soll meldung kommen "entschuldige du bist noch zu jung um dich alleine einschreiben zu können.
-                    // grösser als 65 soll meldung kommen "entschuldige du bist aus dem alter raus wo du noch was lernen kannst. scherz".
+                    // Value changed from less than 10 to less than 18 and from greater than to greater than 65 years
+                    // The idea is 2 different outputs depending on the choice
+                    // less than 18 should display the message "sorry, you are still too young to enroll on your own.
+                    // greater than 65 should display the message "sorry, you are past the age where you can still learn something. joke"..
                     else if (value < 18) { // NOT (0 <= n <= 10)
-                        // kleiner als 18
+                        // less than 18
                         setMessage3('I'm sorry, but you are too young to enroll by yourself.');
                         return false;
                     }
                     else if (value > 65) { // NOT (0 <= n <= 10)
-                        // Entweder ist die Zahl kleiner Null oder grösser 65.
-                        setMessage3('I'm sorry, but you are no longer at an age where you can learn anything.');
+                        // Either the number is less than zero or greater than 65.
+                        setMessage3('I am sorry, but you are no longer at an age where you can learn anything.');
                         return false;
                     
                     }
@@ -101,13 +101,13 @@
                     }
                 }
     
-                // Adressen Feld Function.
+                // Address Field Function.
                 function validateStAdress() {
                     let inputElement = document.getElementById("street");
                     let value = inputElement.value;
     
                     if (!value) { 
-                        // Bsp. '', null, undefined
+                        // Example. '', null, undefined
                         setMessage4('Please enter the street.');
                         return false;
                     }
@@ -118,12 +118,12 @@
                     }
                 }
     
-                // Gender Feld Function
+                // Gender Field Function
                 function validateGender(){
                     let value = document.getElementById("gender").value;
 
                     if (!value) { 
-                        // Bsp. '', null, undefined
+                        // Example. '', null, undefined
                         setMessage4('Please select your gender.');
                         return false;
                     }
@@ -137,26 +137,26 @@
             
                
     
-                // Message 2 Function First Name Eingabefeld Resultat
+                // Message 2 Function First Name Input Field Result
                 function setMessage1(value) {
                     document.getElementById("message-1").innerText = value;
                 }
     
-                // Message 2 Function Last Name Eingabefeld Resultat
+                // Message 2 Function Last Name Input Field Result
                 function setMessage2(value) {
                     document.getElementById("message-2").innerText = value;
                 }
     
-                // Message 3 Function Age Eingabefeld Resultat
+                // Message 3 Function Age Input Field Result
                 function setMessage3(value) {
                     document.getElementById("message-3").innerText = value;
                 }
-                // Message 4 Function Street Eingabefeld Resultat
+                // Message 4 Function Street Input Field Result
                 function setMessage4(value) {
                     document.getElementById("message-4").innerText = value;
                 }
     
-                // Message 5 Function Gender Eingabefeld Resultat
+                // Message 5 Function Gender Input Field Result
                 function setMessage4(value) {
                     document.getElementById("message-5").innerText = value;
                 }
