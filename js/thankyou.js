@@ -30,7 +30,7 @@ function writeConfirmation(){
     let lastname = getLocalStorage(lname);
     let age = getLocalStorage(age);
     let street = getLocalStorage(street);
-    let street = getLocalStorage(gender);
+    let gender = getLocalStorage(gender);
 
    // alert(`firstname = ${firstname}`);
 
