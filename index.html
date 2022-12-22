@@ -4,24 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FrontPage - StreetMindz Academy</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
+    /* start icon bar */
+
+.icon-bar {
+  width: 90px; /* Set a specific width */
+  background-color: rgba(239, 239, 239, 0.435); /* Dark-grey background */
+  z-index:   2 ;
+  position: absolute;
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: rgba(84, 85, 83, 0.314); /* White text color */
+  font-size: 16px; /* Increased font-size */
+  z-index: 3;
+}
+
+.icon-bar a:hover {
+  background-color: rgba(0, 0, 0, 0.094); /* Add a hover color */
+}
+
+.active {
+  background-color: #04aa6d98; /* Add an active/current color */
+}
+    /* end icon bar */
 
 
+    /* Style the video: 100% width and height to cover the entire window */
+    #myVideo {
+      position: fixed ;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: inherit;
+    }
+
+/* Add some content at the bottom of the video/page */
+    .content {
+      font-family: fantasy;
+      position: fixed;
+      bottom: 0;
+      background: rgba(51, 158, 32, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 10px;
+    }
+
+/* Style the button used to pause/play the video */
+    #myBtn {
+      font-family: fantasy;
+      width: 200px;
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      background: rgb(7, 59, 17);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
 
   </style>
+    
 </head>
 <body> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+
     <div>
-    <h1 id="title">Welcome @ StreetMindz Academy the place to be while learning the future!</h1>
 
 
-      
+    <!-- The video -->
+      <video autoplay muted loop id="myVideo">
+        <source src="video/szm.mp4" type="video/mp4">
+      </video>
+
+      <!-- Optional: some overlay text to describe the video -->
+      <div class="content">
+        <h1>Welcome @ StreetMindz Academy the place to be while learning the future!</h1>
+        <p>"the professional artist incubator"</p>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+      </div>
+
     </div>
 
+    <script>
+      // Get the video
+      var video = document.getElementById("myVideo");
+      
+      // Get the button
+      var btn = document.getElementById("myBtn");
+      
+      // Pause and play the video, and change the button text
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+    
 </body>
 </html>
