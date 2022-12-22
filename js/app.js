@@ -161,6 +161,22 @@
                     document.getElementById("message-5").innerText = value;
                 }
             
+                 // Get the video 2 index
+                var video = document.getElementById("myVideo2");
+                
+                // Get the button
+                var btn = document.getElementById("myBtn2");
+                
+                // Pause and play the video, and change the button text
+                function myFunction() {
+                    if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                    } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                    }
+                }
             /*
             // Video Bg
 
