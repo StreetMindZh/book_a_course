@@ -59,6 +59,7 @@
         min-height: 100vh;
         background-size: cover;
         opacity: 0.5;
+        z-index: -1;
     }
     
 
@@ -82,11 +83,11 @@
         }
         
         .icon-bar a:hover {
-            background-color: rgba(0, 0, 0, 0.094); /* Add a hover color */
+            background-color: rgba(0, 0, 0, 0.508); /* Add a hover color */
         }
         
         .active {
-            background-color: #04aa6d98; /* Add an active/current color */
+            background-color: #04aa6de9; /* Add an active/current color */
         }
       /* end icon bar */
 
@@ -98,7 +99,7 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: inherit;
+    z-index: -1;
   }
 
 /* Add some content at the bottom of the video/page */
