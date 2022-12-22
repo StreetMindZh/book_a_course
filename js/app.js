@@ -42,7 +42,7 @@
                     // indexOf() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf?retiredLocale=de
                     else if (value.indexOf('@') === -1) { 
                         // value does NOT contain the '@' symbol.
-                        setMessage1('Please insert an '@' in the first name.');
+                        setMessage1('Please insert an @ in the first name.');
                         return false;
                     }
                     else {
@@ -84,7 +84,7 @@
                     // greater than 65 should display the message "sorry, you are past the age where you can still learn something. joke"..
                     else if (value < 18) { // NOT (0 <= n <= 10)
                         // less than 18
-                        setMessage3('I'm sorry, but you are too young to enroll by yourself.');
+                        setMessage3('I am sorry, but you are too young to enroll by yourself.');
                         return false;
                     }
                     else if (value > 65) { // NOT (0 <= n <= 10)

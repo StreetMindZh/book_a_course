@@ -104,25 +104,28 @@
 
 /* Add some content at the bottom of the video/page */
   .content2 {
-    font-family: fantasy;
+    font-family: Arial, Helvetica, sans-serif;
     position: fixed;
     bottom: 0;
-    background: rgba(51, 158, 32, 0.5);
+    background: rgba(51, 158, 32, 0.692);
     color: #f1f1f1;
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
 
 /* Style the button used to pause/play the video */
   #myBtn2 {
-    font-family: fantasy;
-    width: 200px;
-    font-size: 14px;
-    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    font-size: 21px;
+    padding: 20px;
     border: none;
     background: rgb(7, 59, 17);
     color: #fff;
     cursor: pointer;
+    align-content: center;
   }
 
   #myBtn2:hover {

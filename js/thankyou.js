@@ -27,10 +27,10 @@ function writeConfirmation(){
     // PersonaThe personal details are read into variables.
 
     let firstname = getLocalStorage("fname");
-    let lastname = getLocalStorage(lname);
-    let age = getLocalStorage(age);
-    let street = getLocalStorage(street);
-    let gender = getLocalStorage(gender);
+    let lastname = getLocalStorage("lname");
+    let age = getLocalStorage("age");
+    let street = getLocalStorage("street");
+    let gender = getLocalStorage("gender");
 
    // alert(`firstname = ${firstname}`);
 
