@@ -13,3 +13,5 @@ Github Link:            https://github.com/StreetMindZh/book_a_course.git
 Domain for Testing      https://streetmindzh.github.io/book_a_course/
 
 wireframe: https://drive.google.com/drive/folders/1QAVzDPbmus32xDqfgUtzybKl8IneHxM4?usp=share_link
+
+Whole Folder on Google:  https://drive.google.com/drive/folders/1KMqAmI8Gln5ReUQUZLgl4XZwMlTIQq7V?usp=share_link
